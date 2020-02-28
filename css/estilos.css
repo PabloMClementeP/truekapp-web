@@ -2,6 +2,7 @@
 body{
 	width: 98%;
 	margin: 0 auto;
+	font-family: 'Roboto', sans-serif;
 }
 
 
@@ -19,7 +20,7 @@ body{
 
 .logo{
     width: auto;
-	height: 90px;
+	height: 60px;
 }
 
 .form-inline {
@@ -45,8 +46,19 @@ body{
 /*    Banner publicidad superior	  */
 /* ********************************** */
 .banner-superior .carousel-item img{
-	max-height: 200px;
+	width: 80%;
+	max-height: 150px;
 }
+
+
+/* ********************************** */
+/*           Barra lateral	          */
+/* ********************************** */
+
+#sidebar-wrapper{
+	margin-top: 90px;
+}
+
 
 
 /* ********************************** */
@@ -77,38 +89,39 @@ body{
 
 
 /* ********************************** */
-/*         Formulario de login        */
+/*  Formularios login - registro      */
 /* ********************************** */
-.login-container{
-    margin-top: 2%;
-    margin-bottom: 5%;
-}
-.login-form{
-    padding: 5%;
-    background: #0062cc;
+
+
+.form-registro{
+    background: #63a375;
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
 }
-.login-form h3{
+
+.form-registro .form-group{
     text-align: center;
     color: #fff;
 }
-.login-container form{
-    padding: 10%;
+
+.form-registro .titulo-form{
+	text-align: center;
+    color: #fff;
 }
-.btnSubmit
+
+
+.btn-form
 {
     width: 50%;
     border-radius: 1rem;
     padding: 1.5%;
     border: none;
     cursor: pointer;
-}
-.login-form .btnSubmit{
     font-weight: 600;
     color: #0062cc;
     background-color: #fff;
 }
-.login-form .ForgetPwd{
+
+.link-form{
     color: #fff;
     font-weight: 600;
     text-decoration: none;
@@ -122,3 +135,4 @@ body{
 	background-color: #85e085;
 	border-top: 4px solid #155115;
 }
+
