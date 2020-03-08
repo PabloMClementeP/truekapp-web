@@ -1,0 +1,41 @@
+Configurando
+
+django-admin.py startproject NOMBRE_PROYECTO
+Carpeta apps
+crear archivo __init__.py dentro de la carpeta apps
+django-admin startapp NOMBRE APP
+	core
+	perfiles
+	publicacion
+
+configuracion del settting
+Creo modelos en los archivos models de cada app
+los registro en el archivo admin de cada app 
+creo superusuario
+corro el servidor
+entro a admin
+
+Creo las Vistas
+
+archivo views de la app
+agrego from django.shortcuts import render, HttpResponse
+Creo las funciones o clases (vistas por clase o por funcion)
+carpeta templates
+creo archivo urls dentro de la app
+urlpatterns agrego las urls
+
+setting principal agrego en templates DIRS
+[os.path.join(BASE_DIR, 'templates')]
+en urls principal importo path e include 
+agrego el include de cada directorio de las appss
+
+Configurar archivos estaticos
+en settings agrego al final:
+	STATICCFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+{% load static %} en cada archivo que use esstaticos
+{% static 'css/estilos.css' %} cargo los etaticos de esta maneras
+
+Formulario para nuevo usuario:
+Creo un archivo form.py en la raiz de la app perfil
+extiendo el modelo user en perfil
+
