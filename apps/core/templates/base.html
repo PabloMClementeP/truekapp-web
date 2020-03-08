@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimun-scale=1.0">
+        <title>Truekapp | {% block titulo %}{% endblock %}</title>
+        
+        {% load static %}
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+    
+        <link rel="stylesheet" href="{% static 'css/bootstrap-4-hover-navbar.css' %}">
+        <link rel="stylesheet" href="{% static 'css/simple-sidebar.css' %}">
+    
+        <!-- CSS Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"> 
+    
+    </head>
+
+    <body>
+
+   
+        <!-- ************************************************************************************ -->
+        <!--                            Cabecera y Navegacion                                     -->
+        <!-- ************************************************************************************ -->
+        {% block header%}
+        <nav class="navbar navbar-expand-lg navbar-light cabecera">
+            <div class="container">
+                <a class="navbar-brand" href="{% url 'home' %}"><img class="logo" src="{% static 'img/índice.png' %}" alt=""></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <form class="form-inline justify-content-center align-items-center container my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Que estas buscando?..." aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+                </form>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item {% if request.path == '/' %} active {% endif %}">
+                            <a class="nav-link" href="{% url 'home' %}">Inicio</a>
+                        </li>
+                        <li class="nav-item {% if request.path == 'registrarse/' %} active {% endif %}">
+                            <a class="nav-link" href="{% url 'registrar' %}">Registrarse</a>
+                        </li>
+                        <li class="nav-item {% if request.path == 'ingreso/' %} active {% endif %}">
+                            <a class="nav-link" href="{% url 'ingreso' %}">Ingresar</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        {% endblock%}
+    
+    
+        <!-- ************************************************************************************ -->
+        <!--                               Menu desplegable estatico                              -->
+        <!-- ************************************************************************************ -->
+
+        {% block menu %}
+        <div class="sticky-top nav-superior">
+            <nav class="navbar navbar-expand-md navbar-light btco-hover-menu">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center align-items-center" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Categorias
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Alimentos</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Bebidas</a></li>
+                                        <li><a class="dropdown-item" href="#">Comestibles</a></li>
+                                        <li><a class="dropdown-item" href="#">Veganos</a></li>
+                                        <li><a class="dropdown-item" href="#">Celiacos</a></li>
+                                        <li><a class="dropdown-item" href="#">Otros productos</a></li>
+                                    </ul>
+                                </li>
+
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Autos</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Accesorios</a></li>
+                                        <li><a class="dropdown-item" href="#">Audio automotriz</a></li>
+                                        <li><a class="dropdown-item" href="#">Tuning</a></li>
+                                        <li><a class="dropdown-item" href="#">Neumaticos</a></li>
+                                        <li><a class="dropdown-item" href="#">Repuestos</a></li>
+                                    </ul>
+                                </li>
+
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Bebes</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Juguetes de bebe</a></li>
+                                        <li><a class="dropdown-item" href="#">Coches y andadores</a></li>
+                                        <li><a class="dropdown-item" href="#">Seguridad para bebes</a></li>
+                                        <li><a class="dropdown-item" href="#">Alimentacion</a></li>
+                                        <li><a class="dropdown-item" href="#">Cuidado e higiene</a></li>
+                                    </ul>
+                                </li>
+
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Belleza</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Farmacia</a></li>
+                                        <li><a class="dropdown-item" href="#">Higiene</a></li>
+                                        <li><a class="dropdown-item" href="#">Maquillaje</a></li>
+                                        <li><a class="dropdown-item" href="#">Perfumes</a></li>
+                                        <li><a class="dropdown-item" href="#">Articulos peluqueria</a></li>
+                                        <li><a class="dropdown-item" href="#">Manicuria | Pedicuria</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item" href="#">Telefonia</a>
+                                
+                                </li>
+                                <li><a class="dropdown-item" href="#">Computacion</a></li>
+                                <li><a class="dropdown-item" href="#">Electrodomesticos</a></li>
+                                <li><a class="dropdown-item" href="#">Herramientas</a></li>
+                                <li><a class="dropdown-item" href="#">Juguetes</a></li>
+                                <li><a class="dropdown-item" href="#">Libros</a></li>
+                                <li><a class="dropdown-item" href="#">Mascotas</a></li>
+                                <li><a class="dropdown-item" href="#">Motos</a></li>
+                                <li><a class="dropdown-item" href="#">Muebles</a></li>
+                                <li><a class="dropdown-item" href="#">Musica</a></li>
+                                <li><a class="dropdown-item" href="#">Vestimenta</a></li>
+                                <li><a class="dropdown-item" href="#">Videojuegos</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item mx-4">
+                            <a class="nav-link" href="#">Publicar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Ayuda</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+        </div>
+        {% endblock %}
+
+
+
+        <!-- ************************************************************************************ -->
+        <!--                            Banner superior publicidad                                -->
+        <!-- ************************************************************************************ -->
+        {% block banner %}
+        
+        {% endblock %}
+
+    
+        <!-- ************************************************************************************ -->
+        <!--                            Seccion de contenido                                      -->
+        <!-- ************************************************************************************ -->
+        
+        <div class="d-flex" id="wrapper" class="toggled">
+
+            {% block sidebar%}
+                
+            {% endblock %}
+            <!-- Fin sidebar -->
+        
+            <div id="page-content-wrapper">
+                <div class="container-fluid">
+                
+                    <!-- Contenido de la pagina -->
+                        {% block content %}{% endblock %}
+                    <!-- Final contenido de la pagina -->
+
+                </div>
+            </div>
+        </div>
+        <!-- Fin wrapper -->
+
+
+
+
+        <!-- ************************************************************************************ -->
+        <!--                                    Footer                                            -->
+        <!-- ************************************************************************************ -->
+        {% block footer %}
+        <footer class="footer">
+            <div class="container mt-2">
+                <ul class="nav justify-content-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Categorias populares</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Mas buscados</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Información util</a>
+                    </li>
+                </ul>
+                <p class="text-center my-2">Truekapp idea y creación CabezasFive</p>
+            </div>
+        </footer>
+        {% endblock %}
+
+        
+        <!-- ************************************************************************************ -->
+        <!-- Bootstrap Javascript -->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <script src="{% static 'js/bootstrap-4-hover-navbar.js' %}"></script>
+    
+    </body>
+
+</html>

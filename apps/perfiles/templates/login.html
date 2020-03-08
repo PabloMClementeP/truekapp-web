@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block titulo %}Inicio{% endblock %}
+
+{% block banner %}
+    {% include 'banner_publicidad.html' %}
+{% endblock %}
+
+
+{% block content %}
+
+    <!-- login -->
+    <div class="container">
+        <div class="row justify-content-center mt-2 pt-2 mb-4">
+            <div class="col-md-7 form-registro">
+                <h1 class="display-6 titulo-form">Ingresar</h1>
+                <hr class="bg-info">
+                <p class="mb-0 pb-0">Ingresa con tus datos</p>
+                <!--<p class="text-danger small pt-0 mt-0">*Todos los campos son obligatorios</p>-->
+
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="row form-group">
+                        <label for="nombre" class="col-form-label col-md-4">Nombre usuario:</label>
+                        <div class="col-md-8">
+                            <input type="text" name="username" value="" id="nombre" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <label for="password" class="col-form-label col-md-4">Contraseña:</label>
+                        <div class="col-md-8">
+                            <input type="password" name="password" value="" id="password" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <input type="submit" value = "Ingresar" class="btn btn-info btn-form">
+                        <p class="text-danger pt-0 mt-0 mb-4">Olvidaste la contraseña? <a class="link-form" href="{% url 'resetpass' %}">Restablecer clave</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Final contenido de la pagina -->
+    
+
+{% endblock %}
+
+
