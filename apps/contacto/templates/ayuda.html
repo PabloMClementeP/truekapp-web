@@ -1,0 +1,143 @@
+{% extends 'base.html' %}
+
+{% block titulo %}Ayuda | Contacto{% endblock %}
+
+
+{% block header %}
+    {% include 'header.html' %}
+{% endblock %}
+
+
+{% block content %}
+<!-- ************************************************************************************ -->
+<!--                            Seccion de contenido ayuda                                     -->
+<!-- ************************************************************************************ -->
+
+<div class="justify-content-center" id="preguntas">
+    <div id="accordion" role="tablist" >
+        <div class="card ">
+            <div class="card-header" role="tab" id="headingOne">
+                <h5 class="mb-0" style="text-align: center;">
+                <a data-toggle="collapse" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne" text-decoration="none">
+                    ¿Como me registro?
+                </a>
+                </h5>
+            </div>
+            <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
+                <div class="card-body">
+                Tenes que ir a la parte superior de la pagina de inicio donde dice registrarse !!!, y alli te registras ingresando los datos en el formulario.
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" role="tab" id="headingTwo">
+                <h5 class="mb-0" style="text-align: center;">
+                <a class="collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    ¿Como publicar?
+                </a>
+                </h5>
+            </div>
+            <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
+                <div class="card-body">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="accordion" role="tablist">
+        <div class="card">
+            <div class="card-header" role="tab" id="heading3">
+                <h5 class="mb-0" style="text-align: center;">
+                <a data-toggle="collapse" href="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                ¿Como comprar creditos?
+                </a>
+                </h5>
+            </div>
+        
+            <div id="collapse3" class="collapse show" role="tabpanel" aria-labelledby="heading3">
+                <div class="card-body">
+                Poder comprar creditos depositando en la cuenta de Treukapp dinero posta que se tranforma en creditos, que a su vez podras hacer un treque con otro usuario.
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" role="tab" id="heading4">
+                <h5 class="mb-0" style="text-align: center;">
+                <a class="collapsed" data-toggle="collapse" href="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                    ¿Como ofreces un trueque?
+                </a>
+                </h5>
+            </div>
+            <div id="collapse4" class="collapse" role="tabpanel" aria-labelledby="heading4">
+                <div class="card-body">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="accordion" role="tablist">
+        <div class="card">
+            <div class="card-header" role="tab" id="heading5">
+                <h5 class="mb-0" style="text-align: center;">
+                <a data-toggle="collapse" href="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                    ¿Es gratuito?
+                </a>
+                </h5>
+            </div>
+        
+            <div id="collapse5" class="collapse show" role="tabpanel" aria-labelledby="heading5">
+                <div class="card-body">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+        <!-- ************************************************************************************ -->
+        <!--                                    Formulario                                            -->
+        <!-- ************************************************************************************ -->
+
+<div class="container mb-4">
+    <div class="row justify-content-center mt-2 pt-2">
+        <div class="col-md-7 form-registro">
+            <h2 class="display-6 titulo-form">Contactanos</h2>
+            <hr class="bg-info">
+            
+            <!--<p class="text-danger small pt-0 mt-0">*Todos los campos son obligatorios</p>-->
+            {% if 'ok' in request.GET %}
+                <p class="justify-content-center"><b>Su mensaje se ha enviado correctamente, <br> estaremos en contacto con usted a la brevedad</b></p>
+            {% endif %}
+            <form action="" method="POST">
+                {% csrf_token %}
+                <div class="row form-group">
+                    <label for="nombre" class="col-form-label col-md-4">Nombre:</label>
+                    <div class="col-md-8">
+                        <input type="text" name="nombre" value="" id="nombre" class="form-control" required>
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <label for="email" class="col-form-label col-md-4">E-Mail:</label>
+                    <div class="col-md-8">
+                        <input type="email" name="email" value="" id="email" class="form-control" required>
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <label for="mensaje" class="col-form-label col-md-4">Su mensaje:</label>
+                    <div class="col-md-8">
+                        <input type="text" name="mensaje" value="" id="mensaje" class="form-control" required>
+                    </div>
+                </div>
+                <div class="text-center mb-4">
+                    <button type="submit" class="btn btn-info btn-form">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+  
+
+{% endblock %}

@@ -1,0 +1,189 @@
+
+body{
+	width: 98%;
+	margin: 0 auto;
+	font-family: 'Roboto', sans-serif;
+}
+
+
+
+/* ********************************** */
+/*   Cabecera y barra de navegacion   */
+/* ********************************** */
+.cabecera {
+	background-color: #85e085;
+	border-bottom: 2px solid #155115;
+	padding-top: 15px;
+	padding-left: 15px;
+	font-size: 1.4em;
+}
+
+.logo{
+    width: auto;
+	height: 60px;
+}
+
+.form-inline {
+	font-family: 'Lobster' ;
+	color: black;
+}
+.form-inline input{
+	font-size: 1.2rem;
+}
+
+
+/* ********************************** */
+/*   Menu desplegable superior        */
+/* ********************************** */
+.nav-superior{
+	background-color: #85e085;
+	border-bottom: 2px solid #155115;
+}
+
+
+
+/* ********************************** */
+/*    Banner publicidad superior	  */
+/* ********************************** */
+.banner-superior .carousel-item img{
+	width: 80%;
+	max-height: 150px;
+}
+
+
+/* ********************************** */
+/*           Barra lateral	          */
+/* ********************************** */
+
+#sidebar-wrapper{
+	margin-top: 90px;
+}
+
+
+
+/* ********************************** */
+/*    Imagenes de las publicaciones   */
+/* ********************************** */
+
+.card{
+	width: 250px;
+	margin-top: 5px;
+}
+
+.card:hover{
+	box-shadow: 2px 2px 2px 2px #000301;
+}
+.card .imagen-producto{
+	height: 120px;
+}
+
+.card .imagen-producto img{
+	width: auto;
+	max-height: 100px ;
+}
+
+.card-footer{
+	height: 100px;
+}
+
+
+
+/* ********************************** */
+/*  Formularios login - registro      */
+/* ********************************** */
+
+
+.form-registro{
+    background: #63a375;
+	box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+}
+
+.form-registro .form-group{
+    text-align: center;
+    color: #fff;
+}
+
+.form-registro .titulo-form{
+	text-align: center;
+    color: #fff;
+}
+
+
+.btn-form
+{
+    width: 50%;
+    border-radius: 1rem;
+    padding: 1.5%;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    color: #0062cc;
+    background-color: #fff;
+}
+
+.link-form{
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+
+/* ********************************** */
+/*               Footer               */
+/* ********************************** */
+.footer{
+	background-color: #85e085;
+	border-top: 4px solid #155115;
+}
+
+
+
+/* ********************************** */
+/* Imagenes de las publicaciones de ayuda */
+/* ********************************** */
+
+.card{
+	width: 400px;
+	margin-top: 5px;
+    margin-left: 500px;
+}
+
+.card:hover{
+	box-shadow: 2px 2px 2px 2px #000301;
+}
+.card .imagen-producto{
+	height: 120px;
+}
+
+.card .imagen-producto img{
+	width: auto;
+	max-height: 100px ;
+}
+
+.card-footer{
+	height: 100px;
+}
+
+/* ********************************** */
+/*  Contenido colapse ayuda           */
+/* ********************************** */
+
+
+#preguntas{
+	margin-top: 100px;
+}
+#preguntas a{
+	text-decoration: none;
+
+}
+
+
+.card-mb-0 h5 {
+ text-align:center;
+ 
+}
+.card-mb-0 a{
+	text-decoration-line: #155115;
+}
+
+

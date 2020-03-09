@@ -6,7 +6,6 @@ from .models import Perfil
 
 class RegistrarseForm(UserCreationForm):
 
-
     class Meta:
         model= User
         fields = [
@@ -22,3 +21,9 @@ class RegistrarseForm(UserCreationForm):
             'last_name': 'Apellidos',
             'email': 'Correo',
         }
+
+    def clean_email(self):
+        email = self.cleaned_data.get("email")
+        if User.objects.filter(email=email).exists():
+            raise forms.ValidationError("El correo ingresado ya esta registrado, prueba con otro.")
+        return email

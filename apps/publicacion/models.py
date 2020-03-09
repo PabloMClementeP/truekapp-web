@@ -1,6 +1,5 @@
 from django.db import models
-#from apps.usuario.models import Usuario
-
+from apps.perfiles.models import Perfil
 
 # Create your models here.
 
@@ -31,7 +30,7 @@ class Publicacion(models.Model):
     subcategoria = models.OneToOneField (SubCategoria, null = False, blank = False, on_delete = models.DO_NOTHING)
     valor = models.IntegerField ()
     imagen = models.CharField (max_length=500)
-#    usuario = models.OneToOneField (Usuario, null = False, blank = False, on_delete = models.DO_NOTHING)
+    usuario = models.OneToOneField (Perfil, null = False, blank = False, on_delete = models.DO_NOTHING)
     cambia_por = models.ManyToManyField (SubCategoria, related_name='cambio')
     activo = models.BooleanField ()
     fecha_publicado = models.DateTimeField (auto_now= True)

@@ -8,6 +8,13 @@ class PublicacionAdmin(admin.ModelAdmin):
     ordering = ('-titulo',)
     search_fields = ('titulo',)
 
+class SubCategoriaAdmin(admin.ModelAdmin):
+    list_display = ('nombre', 'categoria')
+    list_filter = ('categoria', 'nombre')
+    ordering = ('categoria',)
+    search_fields = ('categoria',)
+
+
 admin.site.register(Publicacion, PublicacionAdmin)
 admin.site.register(Categoria)
-admin.site.register(SubCategoria)
+admin.site.register(SubCategoria, SubCategoriaAdmin)

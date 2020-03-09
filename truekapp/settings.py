@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'apps.core',
     'apps.publicacion',
     'apps.perfiles',
+    'apps.contacto',
 ]
 
 MIDDLEWARE = [
@@ -128,8 +129,9 @@ STATICCFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-# Redireccion despues de hacer login
+# Redireccion despues de hacer login y logout
 LOGIN_REDIRECT_URL = 'home'
+LOGOUT_REDIRECT_URL = 'home'
 
 # Envio de correo
 EMAIL_USE_TLS = True

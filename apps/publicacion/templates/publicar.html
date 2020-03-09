@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+
+{% block titulo %}Publicar nuevo aviso{% endblock %}
+
+
+{% block header %}
+    {% include 'header.html' %}
+{% endblock %}
+
+{% block banner %}
+    {% include 'banner_publicidad.html' %}
+{% endblock %}
+
+{% load static %}
+{% block content %}
+
+
+    <!-- publicacion -->
+    <div class="container">
+        <div class="row justify-content-center mt-2 pt-2">
+            <div class="col-md-8">
+                <h3 id="publicacion" class="public">Titulo de la publicacion</h3>
+            </div>
+            <div class="col-md-4">
+                <button type="button" class="btn btn-lg btn-danger">OFRECER TRUEQUE</button>
+            </div>
+        </div>
+        <div class="row justify-content-baseline mt-2 pt-2">
+            <div class="col-md-2 align-self-end">
+                <img class="imgsmall" src="{% static 'img/no-image-found.png' %}" alt="img1">
+                    <br> <br>
+                <img class="imgsmall" src="{% static 'img/no-image-found.png' %}" alt="img2">
+                    <br> <br>
+                <img class="imgsmall" src="{% static 'img/no-image-found.png' %}" alt="img3">
+            </div>
+            <div class="col-md-6 align-self-end">
+                <img class="img_primary" src="{% static 'img/no-image-found.png' %}" alt="img_primary">
+            </div>
+            <div class="col-md-3 align-self-end">
+                <h5><strong>Articulos de interes para intercambiar</strong></h5>
+                <h6 id="img_primary1">Categoria</h6>
+                <img class="cat_img1" src="{% static 'img/no-image-found.png' %}">
+                <h6 id="img_primary2">Categoria</h6>
+                <img class="cat_img1" src="{% static 'img/no-image-found.png' %}">
+                <h6 id="img_primary3">Categoria</h6>
+                <img class="cat_img1" src="{% static 'img/no-image-found.png' %}">
+            </div>
+        </div>
+        <div class="row float-content-center mt-2 pt-2">
+            <div class="col-sm-8">
+                <div><h3>Descripción de la publicación</h3></div>
+            </div>
+            <div>
+                <button type="button" class="btn btn-lg btn-danger">OFRECER TRUEQUE</button>
+            </div>
+            <div class="col-sm-4">
+                <div>
+                    <div style="border: 3px solid blue"><P id="text description"></P></div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <hr class="bg-info">
+            <h6>Artículos relacionados</h6>
+        </div>
+            <div class="d-flex justify-content-between">
+                <div class="card">
+                    <img class="card-img-bottom" src="{% static 'img/no-image-found.png' %}" alt="Card image cap">
+                    <div class="card-body text-center"> Descripcíon </div>
+                </div>
+                <div class="card">
+                    <img class="card-img-bottom" src="{% static 'img/no-image-found.png' %}" alt="Card image cap">
+                    <div class="card-body text-center"> Descripcíon </div>
+                </div>
+                <div class="card">
+                    <img class="card-img-bottom" src="{% static 'img/no-image-found.png' %}" alt="Card image cap">
+                    <div class="card-body text-center"> Descripcíon </div>
+                </div>
+                <div class="card">
+                    <img class="card-img-bottom" src="{% static 'img/no-image-found.png' %}" alt="Card image cap">
+                    <div class="card-body text-center"> Descripcíon </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Final contenido de la pagina -->
+    
+
+{% endblock %}
+
+

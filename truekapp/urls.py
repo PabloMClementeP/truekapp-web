@@ -22,6 +22,10 @@ urlpatterns = [
     path('', include('apps.core.urls')),
     # Paths de perfiles
     path('', include('apps.perfiles.urls')),
+    # Paths de publicacion
+    path('', include('apps.publicacion.urls')),
+    # Paths de contacto
+    path('', include('apps.contacto.urls')),
     # Paths del admin
     path('admin/', admin.site.urls),
 ]

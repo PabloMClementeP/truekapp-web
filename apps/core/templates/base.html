@@ -29,31 +29,7 @@
         <!--                            Cabecera y Navegacion                                     -->
         <!-- ************************************************************************************ -->
         {% block header%}
-        <nav class="navbar navbar-expand-lg navbar-light cabecera">
-            <div class="container">
-                <a class="navbar-brand" href="{% url 'home' %}"><img class="logo" src="{% static 'img/índice.png' %}" alt=""></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <form class="form-inline justify-content-center align-items-center container my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Que estas buscando?..." aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
-                </form>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item {% if request.path == '/' %} active {% endif %}">
-                            <a class="nav-link" href="{% url 'home' %}">Inicio</a>
-                        </li>
-                        <li class="nav-item {% if request.path == 'registrarse/' %} active {% endif %}">
-                            <a class="nav-link" href="{% url 'registrar' %}">Registrarse</a>
-                        </li>
-                        <li class="nav-item {% if request.path == 'ingreso/' %} active {% endif %}">
-                            <a class="nav-link" href="{% url 'ingreso' %}">Ingresar</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+
         {% endblock%}
     
     
@@ -132,10 +108,10 @@
                             </ul>
                         </li>
                         <li class="nav-item mx-4">
-                            <a class="nav-link" href="#">Publicar</a>
+                            <a class="nav-link" href="{% url 'publicar' %}">Publicar</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Ayuda</a>
+                            <a class="nav-link" href="{% url 'contacto' %}">Ayuda</a>
                         </li>
                     </ul>
                 </div>
@@ -194,7 +170,7 @@
                         <a class="nav-link" href="#">Mas buscados</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Información util</a>
+                        <a class="nav-link" href="{% url 'contacto' %}">Información util</a>
                     </li>
                 </ul>
                 <p class="text-center my-2">Truekapp idea y creación CabezasFive</p>
