@@ -1,5 +1,5 @@
 # Truekapp Web
-### Aplicación web para el intercambio de bienes por medio del trueque
+### Aplicación web en python para el intercambio por medio del trueque
 
 ### Proyecto 1er año programa b_IT 
 
